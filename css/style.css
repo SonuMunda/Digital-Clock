@@ -1,0 +1,76 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define custom font */
+@font-face {
+  font-family: "Digital-7";
+  src: url("../font/digital-7.ttf") format("truetype");
+}
+
+/* Styling for the clock wrapper */
+.clock-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #171b1f;
+}
+
+/* Styling for the clock container */
+.container {
+  height: 320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cyan;
+  color: #171b1f;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Digital-7", sans-serif;
+}
+
+/* Styling for the day element */
+#day {
+  font-size: 6rem;
+  transform: rotate(-90deg);
+  font-family: "Digital-7", sans-serif;
+}
+
+/* Styling for the date and time elements */
+.date-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time,
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  font-size: 6rem;
+}
+
+.date {
+  font-size: 2rem;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 574px) {
+  .container {
+    flex-direction: column;
+  }
+  #day {
+    transform: rotate(0deg);
+  }
+}
